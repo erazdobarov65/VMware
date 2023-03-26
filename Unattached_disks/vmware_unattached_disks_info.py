@@ -8,7 +8,7 @@ from pyVim.task import WaitForTask
 # Enter you connection details
 VC_HOSTs = ["esxi_host1_name.xxx.xx", "esxi_host2_name.xxx.xx"] #array of hypervisor ESXi hosts
 VC_USER        = "ESXi_user" #Read-only user
-VC_PASS        = "ESI_password"
+VC_PASS        = "ESXi_password"
 
 #Function to establish connection with ESXi host
 def vc_connect(VC_HOST):
