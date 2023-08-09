@@ -57,11 +57,9 @@ def appendCSV(title, vmhostinforesources):
 #Function to resolve VM in DNS by its name
 def DNSresolve(vm_name):
     vm_name = vm_name
-    resolver = dns.resolver.Resolver()
-    resolver.nameservers = ['...'] #Enter your DNS IP hre
     try:
-        resolver.query(vm_name, "A")
-    except dns.exception.DNSException:
+        socket.gethostbyname(vm_name)
+    except socket.gaierror:
         dns_resolv_status = "error"
         dns_resolv_status = str(dns_resolv_status)
     else:
